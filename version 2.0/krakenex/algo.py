@@ -11,8 +11,8 @@ k.load_key('kraken.key')
 
 # Buy assets with unweighted index
 def buy_assets(dollar_amount, currency_list):
-    n_currencies = np.size(currency_list)
-    amt_per_currency = dollar_amount/n_currencies
+    num_currencies = np.size(currency_list)
+    amt_per_currency = dollar_amount/num_currencies
 
     for currency in currency_list:
         k.query_private('AddOrder', {'pair': currency,
@@ -34,9 +34,9 @@ def main():
     balance = balance['result']
     orders = orders['result']
 
-    dollar_amount = k.TradeBalance(???, "ZUSD")
-    currency_list = ??
-    buy_assets(dollar_amount, currency_list)
+    #dollar_amount = k.TradeBalance(???, "ZUSD")
+    #currency_list = ??
+    buy_assets(1, ["XXBTZEUR"])
 
 #run main program
 main()
